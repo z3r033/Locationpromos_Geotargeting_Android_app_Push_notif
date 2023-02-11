@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".addCompany">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fourimage"
+            android:layout_width="116dp"
+            android:layout_height="86dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+        <Button
+            android:id="@+id/btnupload"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@color/cardview_dark_background"
+            android:drawableLeft="@drawable/ic_baseline_image_24"
+            android:text="add brand logo"
+            app:layout_constraintBottom_toTopOf="@+id/text_gallery" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageselected"
+            android:layout_width="116dp"
+            android:layout_height="86dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+        <Button
+            android:id="@+id/btnlongitude"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@color/cardview_dark_background"
+            android:drawableLeft="@drawable/ic_baseline_add_location_alt_24"
+            android:text="add location"
+            app:layout_constraintBottom_toTopOf="@+id/text_gallery" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            />
+
+
+
+
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+
+            android:layout_height="600dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textlocationaddcompany"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/company_name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:layout_margin="10dp"
+
+            android:hint="company name"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/company_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:drawableLeft="@drawable/ic_baseline_edit_attributes_24"
+
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notification_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/md_white_1000"
+            android:hint="Notification text"
+            android:scrollbars="vertical"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/notification_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:drawableLeft="@drawable/ic_baseline_edit_attributes_24"
+                android:inputType="textLongMessage"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/md_white_1000"
+            android:hint="description text"
+            android:scrollbars="vertical"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:drawableLeft="@drawable/ic_baseline_edit_attributes_24"
+                android:inputType="textLongMessage"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addcompanybtn"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1dp"
+
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+
+
+                android:text="add company"
+                android:textSize="11dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
